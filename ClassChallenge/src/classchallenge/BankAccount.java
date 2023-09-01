@@ -71,4 +71,12 @@ public class BankAccount {
         }
         return false;
     }
+    
+    public void printBal(boolean x){
+        if(x){
+            System.out.println(String.format("Current Balance: %.2f", this.getAcctBal()));
+        } else {
+            System.out.println("Invalid Transaction");
+        }
+    }
 }

@@ -18,17 +18,9 @@ public class ClassChallenge {
         
        account.setAcctBal(10);
        
-       if(account.Deposit(5)){
-           System.out.println(String.format("Current Balance: %.2f", account.getAcctBal()));
-       }
-       
-       if(account.Withdraw(100)){
-           System.out.println(String.format("Current Balance: %.2f", account.getAcctBal()));
-       }
-       
-       if(account.Withdraw(8)){
-           System.out.println(String.format("Current Balance: %.2f", account.getAcctBal()));
-       }
+       account.printBal(account.Deposit(5));
+       account.printBal(account.Withdraw(100));
+       account.printBal(account.Withdraw(8));
        
     }
     
