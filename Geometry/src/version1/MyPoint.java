@@ -44,10 +44,10 @@ public class MyPoint {
     }
     
     public int getDistance(MyPoint newPoint){
-        return (int)Math.hypot((newPoint.x - this.x), (newPoint.y - this.y));
+        return this.getDistance(newPoint.x, newPoint.y);
     }
     public int getDistance(){
-        return (int)Math.hypot((0 - this.x), (0 - this.y));
+        return this.getDistance(this.x, this.y);
     }
     
     public void displayPoint() {
@@ -91,9 +91,27 @@ public class MyPoint {
         return this.getQuadrant(this.x, this.y);
     }
     
+    public int getAngle(int x, int y) {
+        int quad = this.getQuadrant(x, y);
+        
+        if(quad == 1 || quad == 4){
+            return (int)Math.toDegrees(Math.atan2(y, x));
+        }
+        
+        return 0;
+    }
+    
+    public int getAngle(MyPoint newPoint){
+        return this.getAngle(newPoint.x, newPoint.y);
+    }
+    
+    public int getAngle(){
+        return this.getAngle(this.x, this.y);
+    }
+    
         public static void main(String[] args){
             MyPoint p1 = new MyPoint();
-            MyPoint p2 = new MyPoint(5, 0);
+            MyPoint p2 = new MyPoint(5, -4);
 
             System.out.println("Hello World");
 
@@ -102,6 +120,9 @@ public class MyPoint {
             
             System.out.println(String.format("Quadrant %s: %d", p1.toString(), p1.getQuadrant()));
             System.out.println(String.format("Quadrant %s: %d", p2.toString(), p2.getQuadrant(p2)));
+            
+            System.out.println(String.format("Angle %s: %d\u00B0", p1.toString(), p1.getAngle()));
+            System.out.println(String.format("Angle  %s: %d\u00B0", p2.toString(), p2.getAngle(p2)));
 
         }
 }
