@@ -56,7 +56,7 @@ public class BankAccount {
         this.phoneNo = phoneNo;
     }
     
-    public boolean Deposit(int money){
+    public boolean depositCash(int money){
         if(money > 0){
             this.acctBal += money;
             return true;
@@ -64,7 +64,7 @@ public class BankAccount {
         return false;
     }
     
-    public boolean Withdraw(int money){
+    public boolean withdrawCash(int money){
         if((this.acctBal - money) >= 0){
             this.acctBal -= money;
             return true;
@@ -78,5 +78,15 @@ public class BankAccount {
         } else {
             System.out.println("Invalid Transaction");
         }
+    }
+    
+    public boolean transferCash(BankAccount toAcct, int transAmt){
+        if(transAmt > 0 && transAmt < this.acctBal){
+            this.acctBal -= transAmt;
+            toAcct.acctBal += transAmt;
+            return true;
+        }
+        
+        return false;
     }
 }
