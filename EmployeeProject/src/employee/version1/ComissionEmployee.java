@@ -105,14 +105,9 @@ public class ComissionEmployee {
 
     @Override
     public String toString() {
-        return String.format("ID: %d \nName: %s\nDate Hired: %s\nBirthday: %s", this.empID, this.empName, this.getEmpDateHired(), this.getEmpBirthDate());
+        return "Employee ID: " + empID + "\nName: " + empName + "\nDate Hired: " + this.getEmpDateHired()
+                + "\nBirthday: " + this.getEmpBirthDate() + "\nTotal Sales: " + totalSales + "\n";
     }
+
     
-        public static void main(String[] args){
-            Date test = new Date();
-            HourlyEmployee Emp = new HourlyEmployee(1, "Jane Doe", test, test, 40, 5550);
-            
-            Emp.displayInfo();
-            //System.out.println(Emp.toString());
-        }
 }

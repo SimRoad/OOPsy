@@ -108,6 +108,10 @@ public class PieceWorkerEmployee {
 
     @Override
     public String toString() {
-        return String.format("ID: %d \nName: %s\nDate Hired: %s\nBirthday: %s\nFinished Pieces: %d\nPiece/Rate", this.empID, this.empName, this.getEmpDateHired(), this.getEmpBirthDate(), this.totalPiecesFinished, this.ratePerPiece);
+        return "Employee ID: " + empID + "\nName: " + empName + "\nDate Hired: " + this.getEmpDateHired()
+                + "\nBirthDay: " + this.getEmpBirthDate() + "\nTotal Pieces: " + totalPiecesFinished 
+                + "\nRate per Piece: " + ratePerPiece + "\n";
     }
+
+    
 }

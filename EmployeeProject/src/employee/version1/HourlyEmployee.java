@@ -118,14 +118,6 @@ public class HourlyEmployee {
 
     @Override
     public String toString() {
-        return String.format("ID: %d \nName: %s\nDate Hired: %s\nBirthday: %s\nTotal hours worked: %.2f\nRate/Hour: %.2f", this.empID, this.empName, this.getEmpDateHired(), this.getEmpBirthDate(), this.totalHoursWorked, this.ratePerHour);
+        return String.format("ID: %d \nName: %s\nDate Hired: %s\nBirthday: %s\nTotal hours worked: %.2f\nRate/Hour: %.2f\n", this.empID, this.empName, this.getEmpDateHired(), this.getEmpBirthDate(), this.totalHoursWorked, this.ratePerHour);
     }
-    
-        public static void main(String[] args){
-            Date test = new Date();
-            HourlyEmployee Emp = new HourlyEmployee(1, "Jane Doe", test, test, 40, 5550);
-            
-            Emp.displayInfo();
-            //System.out.println(Emp.toString());
-        }
 }
