@@ -15,12 +15,25 @@ public class ClassChallenge {
      */
     public static void main(String[] args) {
         BankAccount account = new BankAccount();
+        BankAccount acct2 = new BankAccount();
         
        account.setAcctBal(10);
        
-       account.printBal(account.Deposit(5));
-       account.printBal(account.Withdraw(100));
-       account.printBal(account.Withdraw(8));
+       System.out.println("Current Balance: "+ account.getAcctBal());
+       System.out.println("\nDeposit P 5.00");
+       account.printBal(account.depositCash(5));
+       
+       System.out.println("\nWithdraw P 100.00");
+       account.printBal(account.withdrawCash(100));
+       
+       System.out.println("\nWithdraw P 8.00");
+       account.printBal(account.withdrawCash(8));
+       
+       System.out.println("\nTransfer P 8.00");
+       account.printBal(account.transferCash(acct2, 8));
+       
+       System.out.println("\nTransfer P 2.00");
+       account.printBal(account.transferCash(acct2, 2));
        
     }
     
