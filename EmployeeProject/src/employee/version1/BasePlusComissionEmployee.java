@@ -115,8 +115,8 @@ public class BasePlusComissionEmployee {
 
     @Override
     public String toString() {
-        return "ID: " + empID + "\nName: " + empName + "\nDate Hired" + this.getEmpDateHired() 
-                + "\nBirthday" + this.getEmpBirthDate() + "\nTotal Sales: " + totalSales 
+        return "ID: " + empID + "\nName: " + empName + "\nDate Hired: " + this.getEmpDateHired() 
+                + "\nBirthday: " + this.getEmpBirthDate() + "\nTotal Sales: " + totalSales 
                 + "\nBase Salary: " + baseSalary + '\n';
     }
 }

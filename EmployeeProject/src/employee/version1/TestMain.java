@@ -25,6 +25,17 @@ public class TestMain {
             System.out.println(hourEmp1.toString());
             System.out.println(hourEmp2.toString() + "\nSalary: " + hourEmp2.computeSalary() + "\n");
             System.out.println(hourEmp3.toString() + "\nSalary: " + hourEmp3.computeSalary() + "\n");
+            
+        System.out.println("----------------------Piece Worker Employees:----------------------");
+            PieceWorkerEmployee pieceEmp1 = new PieceWorkerEmployee();
+            PieceWorkerEmployee pieceEmp2 = new PieceWorkerEmployee(1, "Jeshwin Laude", tempDate, tempDate);
+            pieceEmp2.setRatePerPiece(5);
+            pieceEmp2.setTotalPiecesFinished(99);
+            PieceWorkerEmployee pieceEmp3 = new PieceWorkerEmployee(2, "Honiria Lew", tempDate, tempDate, 100, 5);
+
+            System.out.println(pieceEmp1.toString());
+            System.out.println(pieceEmp2.toString() + "\nSalary: " + pieceEmp2.computeSalary() + "\n");
+            System.out.println(pieceEmp3.toString() + "\nSalary: " + pieceEmp3.computeSalary() + "\n");
         
         System.out.println("----------------------Commission----------------------");
             ComissionEmployee commEmp1 = new ComissionEmployee();
@@ -39,7 +50,7 @@ public class TestMain {
             System.out.println(commEmp3.toString() + "\nSalary: " + commEmp3.computeSalary() + "\n");
             System.out.println(commEmp4.toString() + "\nSalary: " + commEmp4.computeSalary() + "\n");
 
-        System.out.println("----------------------Commission----------------------");
+        System.out.println("----------------------Base Commission----------------------");
             BasePlusComissionEmployee baseCommEmp1 = new BasePlusComissionEmployee();
             baseCommEmp1.setTotalSales(36000);
             BasePlusComissionEmployee baseCommEmp2 = new BasePlusComissionEmployee(1, "Jeshwin Laude", tempDate, tempDate);
