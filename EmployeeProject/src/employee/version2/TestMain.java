@@ -36,5 +36,49 @@ public class TestMain {
             pieceEmp1.displayInfo();
             System.out.println("Salary: " + pieceEmp1.computeSalary() + '\n');
             System.out.println(pieceEmp2.toString() + "\nSalary: " + pieceEmp2.computeSalary() + '\n');
+    
+        System.out.println("----------------------Commision Employees:----------------------");
+            CommissionEmployee commEmp1 = new CommissionEmployee(1, "Hua Shui", temp, temp);
+            CommissionEmployee commEmp2 = new CommissionEmployee(2, "Cain Mk V", temp, temp, 57000);
+            commEmp1.displayInfo();
+            commEmp1.setTotalSales(36000);
+
+            commEmp1.displayInfo();
+            System.out.println("Salary: " + commEmp1.computeSalary() + '\n');
+            System.out.println(commEmp2.toString() + "\nSalary: " + commEmp2.computeSalary() + '\n');
     }
 }
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
+//deez nuts
