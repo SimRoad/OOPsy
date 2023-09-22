@@ -21,12 +21,11 @@ public class CommissionEmployee extends Employee {
         this.totalSales = totalSales;
     }
     
-    public CommissionEmployee(int empID, String empName, Date empDateHired, Date empBirthDate) {
+    public CommissionEmployee(int empID, Name empName, Date empDateHired, Date empBirthDate) {
         super(empID, empName, empDateHired, empBirthDate);
-        this.totalSales = totalSales;
     }
 
-    public CommissionEmployee(int empID, String empName, Date empDateHired, Date empBirthDate, double totalSales) {
+    public CommissionEmployee(int empID, Name empName, Date empDateHired, Date empBirthDate, double totalSales) {
         super(empID, empName, empDateHired, empBirthDate);
         this.totalSales = totalSales;
     }
@@ -61,12 +60,15 @@ public class CommissionEmployee extends Employee {
         return this.computeSalary(this.totalSales);
     }
     
+    @Override
     public String toString() {
         return super.toString() + "\nTotal Sales: " + this.totalSales;
     }
     
+    @Override
     public void displayInfo(){
-        System.out.println(this.toString());
+        super.displayInfo();
+        System.out.print(this.computeSalary() + "\n\n");
     }
     
     

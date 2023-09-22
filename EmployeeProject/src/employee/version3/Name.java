@@ -11,33 +11,47 @@ package employee.version3;
  */
 public class Name {
     private String firstName;
+    private String midName;
     private String lastName;
-    private char midInitial;
-    private String suffix;
+    private String []suffix = {""};
 
     public Name() {
+        this.firstName = "";
+        this.lastName = "";
+        this.midName = " ";
     }
 
     public Name(String firstName) {
         this.firstName = firstName;
+        this.lastName = "";
+        this.midName = " ";
     }
 
     public Name(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.midName = " ";
     }
 
-    public Name(String firstName, String lastName, char midInitial) {
+    public Name(String firstName, String midInitial, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.midInitial = midInitial;
+        this.midName = midInitial;
     }
+    
 
-    public Name(String firstName, String lastName, char midInitial, String suffix) {
+    public Name(String firstName, String midInitial, String lastName, String ...suffix) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.midInitial = midInitial;
+        this.midName = midInitial;
         this.suffix = suffix;
+    }
+    
+    public Name(Name name){
+        this.firstName = name.firstName;
+        this.lastName = name.lastName;
+        this.midName = name.midName;
+        this.suffix = name.suffix;
     }
 
     public String getFirstName() {
@@ -56,23 +70,34 @@ public class Name {
         this.lastName = lastName;
     }
 
-    public char getMidInitial() {
-        return midInitial;
+    public String getMidName() {
+        return midName;
     }
 
-    public void setMidInitial(char midInitial) {
-        this.midInitial = midInitial;
+    public void setMidName(String midName) {
+        this.midName = midName;
     }
 
     public String getSuffix() {
-        return suffix;
+        String sufString = "";
+        for(int x = 0; x < suffix.length; x++){
+            sufString += (x + 1 != suffix.length) ? suffix[x] + " " : suffix[x];
+        }
+        
+        return sufString;
     }
 
-    public void setSuffix(String suffix) {
+    public void setSuffix(String[] suffix) {
         this.suffix = suffix;
     }
+
     
-    
+
+    @Override
+    public String toString() {
+        String middle = midName == " " ? "" : midName.charAt(0) + ". ";
+        return firstName + " " + middle + lastName + " "+ this.getSuffix();
+    }
     
     
 }

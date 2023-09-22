@@ -28,7 +28,11 @@ public class HourlyEmployee extends Employee {
         this.ratePerHour = ratePerHour;
     }
     
-    
+    public HourlyEmployee(int empID, Name empName, Date empDateHired, Date empBirthDate, float totalHoursWorked, float ratePerHour) {
+        super(empID, empName, empDateHired, empBirthDate);
+        this.totalHoursWorked = totalHoursWorked;
+        this.ratePerHour = ratePerHour;
+    }
     
     public float getTotalHoursWorked() {
         return totalHoursWorked;
@@ -64,8 +68,10 @@ public class HourlyEmployee extends Employee {
         return this.computeSalary(this.totalHoursWorked, this.ratePerHour);
     }
     
+    @Override
     public void displayInfo(){
-        System.out.println(this.toString());
+        super.displayInfo();
+        System.out.print(this.computeSalary() + "\n\n");
     }
 
     @Override
