@@ -63,10 +63,13 @@ public class HourlyEmployee extends Employee {
         return this.computeSalary(this.totalHoursWorked, this.ratePerHour);
     }
     
+    @Override
     public void displayInfo(){
-        System.out.println(this.toString());
+        super.displayInfo();
+        System.out.print(this.computeSalary() + "\n\n");
     }
 
+    @Override
     public String toString() {
         return super.toString() + "\nTotal Hours: " + this.totalHoursWorked + "\nRate: " + this.ratePerHour;
     }

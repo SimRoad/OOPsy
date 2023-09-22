@@ -62,10 +62,10 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee ID: " + empID + "\nName: " + empName + "\nDate Hired: " 
-                + this.getEmpDateHired() + "\nBirthDay: " + this.getEmpBirthDate();
+                + this.getEmpDateHired() + "\nBirthday: " + this.getEmpBirthDate();
     }
     
-    public void displayInfo(Employee emp) {
-        System.out.println(emp.toString());
+    public void displayInfo() {
+        System.out.print(this.toString() + "\nSalary: ");
     }
 }

@@ -57,12 +57,15 @@ public class PieceWorkerEmployee extends Employee {
         return this.computeSalary(this.totalPiecesFinished, this.ratePerPiece);
     }
     
+    @Override
     public String toString() {
         return super.toString() + "\nTotal Pieces: " + this.totalPiecesFinished + "\nRate: " + this.ratePerPiece;
     }
     
+    @Override
     public void displayInfo(){
-        System.out.println(this.toString());
+        super.displayInfo();
+        System.out.print(this.computeSalary() + "\n\n");
     }
     
 }
