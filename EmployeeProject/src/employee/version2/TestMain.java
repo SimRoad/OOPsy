@@ -53,7 +53,7 @@ public class TestMain {
             baseCommEmp1.setTotalSales(36000);
             baseCommEmp1.setBaseSalary(45);
 
-            System.out.println(baseCommEmp1.toString() + "Salary: " + baseCommEmp1.computeSalary() + '\n');
+            System.out.println(baseCommEmp1.toString() + "\nSalary: " + baseCommEmp1.computeSalary() + '\n');
             baseCommEmp2.displayInfo();
             baseCommEmp3.displayInfo();
             baseCommEmp4.displayInfo();

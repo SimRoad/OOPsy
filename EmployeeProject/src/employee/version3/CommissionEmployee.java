@@ -62,7 +62,7 @@ public class CommissionEmployee extends Employee {
     
     @Override
     public String toString() {
-        return super.toString() + "\nTotal Sales: " + this.totalSales;
+        return super.toString() + "\nTotal Sales: " + this.totalSales + '\n';
     }
     
     @Override
