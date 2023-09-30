@@ -117,20 +117,19 @@ public class EmployeeRoster {
         }
     }
     
-    public Employee[] searchEmp(String keyword){
+    public EmployeeRoster searchEmp(String keyword){
         int x, keyCount = 0;
-        Employee[] keyList = new Employee[MAX];
+        EmployeeRoster searchRost = new EmployeeRoster();
         
         for(x = 0; x < count; x++){
             if(roster[x].getEmpName().toString().toUpperCase().contains(keyword.toUpperCase())){
-                keyList[keyCount++] = roster[x];
+                searchRost.roster[(searchRost.count++)] = roster[x];
             }
         }
-        
         System.out.println("\nEmployees with the keyword: " + keyword);
-        this.displayAllEmployee(keyList, keyCount);
+        searchRost.displayAllEmployee();
         
-        return keyList;
+        return searchRost;
     }
     
     public int countEmpType(String type){

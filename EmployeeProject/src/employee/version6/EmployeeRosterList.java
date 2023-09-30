@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package employee.version5;
+package employee.version6;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,14 +36,14 @@ public class EmployeeRosterList {
     }
     
     public Employee delEmp(int id){
-        Employee del = new Employee();
         for (Employee emp : roster) {
             if (emp != null && emp.getEmpID() == id) {
-                del = emp;
                 roster.remove(emp);
+                return emp;
             }
         }
-        return del;
+        
+        return null;
     }
     
     public void displayAllEmployee(ArrayList<Employee> empList){
@@ -54,7 +54,7 @@ public class EmployeeRosterList {
             for(Employee emp : empList) {
                 if (emp != null) {
                     System.out.println(String.format(strFormat + "%12.2f |", emp.getEmpID(), emp.getEmpName(), 
-                        this.printEmpType(emp), this.getSalary(emp)));
+                        this.printEmpType(emp), emp.computeSalary()));
                 }
             }
         } else {

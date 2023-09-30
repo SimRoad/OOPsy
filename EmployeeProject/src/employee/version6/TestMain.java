@@ -66,7 +66,7 @@ public class TestMain {
             del.displayInfo();
         }
         
-        abcOrg.addEmp(commEmp2, commEmp3, commEmp4, baseCommEmp4);
+        abcOrg.addEmp(commEmp2, commEmp3, baseCommEmp4);
         Name upd = new Name("Rain");
         abcOrg.updateEmp(30003, upd);
         abcOrg.displayAllEmployee();
