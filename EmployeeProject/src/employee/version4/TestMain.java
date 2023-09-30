@@ -56,13 +56,18 @@ public class TestMain {
         System.out.println(String.format("Number of Base Plus Commission Employee: %d\n\n", abcOrg.countEmpType("BasePlusCommissionEmployee")));
         
         Employee del = abcOrg.delEmp(40002);
-        System.out.println("Deleted Emp 40002:");
-        del.displayInfo();
+        if(del != null){
+            System.out.println("Deleted Emp 40002:");
+            del.displayInfo();
+        }
         del = abcOrg.delEmp(80002);
-        System.out.println("Deleted Emp 80002:");
-        del.displayInfo();
+        if(del != null){
+            System.out.println("Deleted Emp 80002:");
+            del.displayInfo();
+        }
         
-        abcOrg.addEmp(commEmp2, commEmp3, commEmp4);
+        
+        abcOrg.addEmp(commEmp2, commEmp3, baseCommEmp4);
         Name upd = new Name("Rain");
         abcOrg.updateEmp(30003, upd);
         abcOrg.displayAllEmployee();
@@ -73,7 +78,8 @@ public class TestMain {
         
         abcOrg.searchEmp("S");
         abcOrg.searchEmp("lOVe");
-        abcOrg.displayAllEmployee(abcOrg.searchEmp("re"), abcOrg.searchEmp("re").length);
+        EmployeeRoster search = abcOrg.searchEmp("re");
+        search.displayAllEmployee();
         System.out.println("\n");
         abcOrg.displayEmpType("COMMISSIONemployee");
         abcOrg.displayEmpType("Freelance Employee");
