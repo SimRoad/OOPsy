@@ -36,14 +36,14 @@ public class EmployeeRosterList {
     }
     
     public Employee delEmp(int id){
+        Employee del = null;
         for (Employee emp : roster) {
             if (emp != null && emp.getEmpID() == id) {
+                del = emp;
                 roster.remove(emp);
-                return emp;
             }
         }
-        
-        return null;
+        return del;
     }
     
     public void displayAllEmployee(ArrayList<Employee> empList){
